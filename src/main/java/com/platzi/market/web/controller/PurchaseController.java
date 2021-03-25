@@ -18,7 +18,7 @@ public class PurchaseController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Purchase>> getAll() {
-        return new ResponseEntity<>(purchaseService.All(), HttpStatus.OK);
+        return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
     }
 
     @GetMapping("/client/{clientId}")
