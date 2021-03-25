@@ -26,5 +26,5 @@ public interface ProductMapper {
 
     @InheritInverseConfiguration
     @Mapping(target = "codigoBarras", ignore = true)
-    Producto toProduct(Product product);
+    Producto toProducto(Product product);
 }
