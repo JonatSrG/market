@@ -20,14 +20,16 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'junit:junit:4.12'
+	implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
 
 	runtimeOnly 'org.postgresql:postgresql'
 
 	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	testImplementation 'org. springframework.boot:spring-boot-starter-test'
 }
 
 test {

@@ -11,7 +11,6 @@ public class Compra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name = "id_compra")
     private Integer idCompra;
 
@@ -33,7 +32,6 @@ public class Compra {
     @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
-
     public Integer getIdCompra() {
         return idCompra;
     }
@@ -48,6 +46,22 @@ public class Compra {
 
     public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
     }
 
     public LocalDateTime getFecha() {
@@ -80,13 +94,5 @@ public class Compra {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public List<ComprasProducto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<ComprasProducto> productos) {
-        this.productos = productos;
     }
 }

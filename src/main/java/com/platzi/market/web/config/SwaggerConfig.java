@@ -3,6 +3,7 @@ package com.platzi.market.web.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiKey;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -17,5 +18,9 @@ public class SwaggerConfig {
             .select()
             .apis(RequestHandlerSelectors.basePackage("com.platzi.market.web.controller"))
             .build();
+    }
+
+    private ApiKey apiKey(){
+        return new ApiKey("JWT", "Authorization", "header");
     }
 }

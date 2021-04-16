@@ -17,7 +17,7 @@ public class PurchaseController {
     private PurchaseService purchaseService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Purchase>> getAll() {
+    public ResponseEntity<List<Purchase>> getAll(){
         return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
     }
 
